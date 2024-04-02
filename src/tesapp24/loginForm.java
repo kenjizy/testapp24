@@ -51,17 +51,18 @@ public class loginForm extends javax.swing.JFrame {
         pass = new javax.swing.JTextField();
         user = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        rgf = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 153, 0));
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("LOGIN FORM");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(140, 100, 130, 40);
+        jLabel1.setBounds(110, 100, 170, 40);
 
         jLabel2.setText("Username:");
         jPanel1.add(jLabel2);
@@ -88,7 +89,33 @@ public class loginForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(620, 300, 80, 23);
+        jButton1.setBounds(630, 300, 80, 23);
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 970, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 970, 50);
+
+        rgf.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        rgf.setText("New? Click Here to Register");
+        rgf.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rgfMouseClicked(evt);
+            }
+        });
+        jPanel1.add(rgf);
+        rgf.setBounds(530, 330, 180, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,6 +148,12 @@ public class loginForm extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void rgfMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rgfMouseClicked
+      registrationForm rgf = new registrationForm();
+      rgf.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_rgfMouseClicked
 
     /**
      * @param args the command line arguments
@@ -163,7 +196,9 @@ public class loginForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField pass;
+    private javax.swing.JLabel rgf;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }
